@@ -1,0 +1,75 @@
+FUNDAMENTOS 
+
+Programação Orientada a objetivos
+-Classes - OK
+-Objetos - OK
+-Interfaces
+-Herança - OK
+-Polimorfismo - OK
+
+Sintaxe Base
+-DataTypes  - OK
+-Variaveis  - OK
+-Listas - OK
+-Arrays - OK
+-Condicionais - OK
+-Loops - OK
+-Funções - OK
+-Exceções - OK
+-Build
+-Run - OK
+-Criar Classes - OK
+-Instanciar Objetos - OK
+-Herança - OK
+-Sobrecarga - OK
+-Packages - OK
+-Visibilidade - OK
+
+Essência
+-jvm 
+-jdk
+-Gerenciamento de memoria
+-Coleta de lixo - OK
+
+Sintaxe Avançada
+-Casting de dados
+-Generics
+-Streams
+-Collections
+-Map
+-HashMaps
+-Thereads
+-Completable Future
+
+Networking
+-HttpURLConnection
+-HttpClient
+
+Conectar com banco de dados
+-JDBC
+-Drivers
+
+Ferramentas
+-Gradle
+-Mavem
+-Adicionar dependecias
+-Realizar build
+-Gerar pacote
+
+Frameworks
+-Spring
+-Quarks
+
+Testes
+-JUnit
+-Mockito
+-Selenium
+-TestNG
+-DB Unit
+
+Apicações Pratica
+-Agenda telefonica
+-Zoologico
+-Agenda telefonica API com banco de dados
+-Cardapio Digital
+
