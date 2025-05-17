@@ -1,7 +1,6 @@
 package model.Services;
 
 import java.time.Duration;
-
 import model.Entities.CarRental;
 import model.Entities.Invoice;
 
@@ -12,14 +11,13 @@ public class RentalService {
 	private Double pricePerDay;
 
 	//Associations
-	private BrazilTaxService brazilTaxService;
-	private CarRental carRental;
+	private TaxServices taxServices;
 
 	//Builders
-	public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService brazilTaxService) {
+	public RentalService(Double pricePerHour, Double pricePerDay, TaxServices taxServices) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
-		this.brazilTaxService = brazilTaxService;
+		this.taxServices = taxServices;
 	}
 
 	//get e set
@@ -39,19 +37,13 @@ public class RentalService {
 		this.pricePerDay = pricePerDay;
 	}
 
-	public BrazilTaxService getBrazilTaxService() {
-		return brazilTaxService;
+	public TaxServices getTaxServices() {
+		return taxServices;
 	}
 
-	public void setBrazilTaxService(BrazilTaxService brazilTaxService) {
-		this.brazilTaxService = brazilTaxService;
+	public void set(BrazilTaxService brazilTaxService) {
+		this.taxServices = brazilTaxService;
 	}
-
-	
-
-
-
-
 
 	public void processinvoice(CarRental carRental) {
 
@@ -65,17 +57,9 @@ public class RentalService {
 			basicPayment = pricePerDay * Math.ceil(hours / 24.0);
 		}
 
-		double tax = brazilTaxService.tax(basicPayment);
+		double tax = taxServices.tax(basicPayment);
 
 		carRental.setInvoice(new Invoice(basicPayment, tax));
-	}
-
-	public CarRental getCarRental() {
-		return carRental;
-	}
-
-	public void setCarRental(CarRental carRental) {
-		this.carRental = carRental;
 	}
 
 }
